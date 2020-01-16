@@ -3,7 +3,8 @@
     "files.associations": {
         "unordered_map": "c",
         "typeinfo": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "type_traits": "c"
     },
     "code-runner.executorMap": {
         "c": "cd $dir && gcc -Wall -Wextra -pedantic *.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
