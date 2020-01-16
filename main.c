@@ -178,7 +178,7 @@ int comparator(const void *first_element, const void *second_element)
 void merge(int arr[], int left, int middle, int right)
 {
 
-   //step one divide arr in left_arr and right_arr
+   //step one create arr in left_arr and right_arr
    int left_size = middle - left + 1;
    int right_size = right - middle;
    int left_arr[left_size];
@@ -232,7 +232,7 @@ void merge(int arr[], int left, int middle, int right)
 
 void merge_sort(int arr[], int left_index, int right_index)
 {
-   //check input
+
    if (left_index < right_index)
    {
       int middle = left_index + (right_index - left_index) / 2;
