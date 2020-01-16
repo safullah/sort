@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceRoot}/**",
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/local/include/c++/*",
+                "/usr/include/c++/7.3.1",
+                "/usr/include/c++/7.3.1/x86_64-pc-linux-gnu",
+                "/usr/include/c++/v1",
+                "/usr/include/linux"
+            ],
+            "defines": [],
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}",
+                    "/usr/local/include/c++/*",
+                    "/usr/include/c++/7.3.1",
+                    "/usr/include/c++/7.3.1/x86_64-pc-linux-gnu"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
