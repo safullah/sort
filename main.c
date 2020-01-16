@@ -18,7 +18,7 @@ int main()
    int small = 1000;
    int medium = 5000;
    int large = 25000;
-   
+
    int size_of_arrs[num_of_arrs];
    memset(size_of_arrs, 0, num_of_arrs*sizeof(int));
    size_of_arrs[0] = small;
