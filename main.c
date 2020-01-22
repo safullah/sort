@@ -65,14 +65,14 @@ int main()
    for (int i = 0; i < num_of_arrs; i++)
    {
       fill_arr(arrys[i], size_of_arrs[i], rand_limit);
-      printf("\narray of %d integers\n", size_of_arrs[i]);
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray of %d integers\n", size_of_arrs[i]);
+      //print_arr(arrys[i], size_of_arrs[i]);
       start_t = clock();
       bubble_sort(arrys[i], size_of_arrs[i]);
       end_t = clock();
       total_t = end_t - start_t;
-      printf("\narray sorted with bubble_sort\n");
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray sorted with bubble_sort\n");
+      //print_arr(arrys[i], size_of_arrs[i]);
 
       printf("\nbubble_sort: %d integers\n", size_of_arrs[i]);
       printf("start: %ld\n", start_t);
@@ -90,14 +90,14 @@ int main()
    for (int i = 0; i < num_of_arrs; i++)
    {
       fill_arr(arrys[i], size_of_arrs[i], rand_limit);
-      printf("\narray of %d\n", size_of_arrs[i]);
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray of %d\n", size_of_arrs[i]);
+      //print_arr(arrys[i], size_of_arrs[i]);
       start_t = clock();
       qsort((void *)arrys[i], size_of_arrs[i], sizeof(int), qsort_cmp_int);
       end_t = clock();
       total_t = end_t - start_t;
-      printf("\narray sorted with quick_sort\n");
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray sorted with quick_sort\n");
+      //print_arr(arrys[i], size_of_arrs[i]);
 
       printf("\nquick_sort: %d integers\n", size_of_arrs[i]);
       printf("start: %ld\n", start_t);
@@ -115,14 +115,14 @@ int main()
    for (int i = 0; i < num_of_arrs; i++)
    {
       fill_arr(arrys[i], size_of_arrs[i], rand_limit);
-      printf("\narray of %d\n", size_of_arrs[i]);
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray of %d\n", size_of_arrs[i]);
+      //print_arr(arrys[i], size_of_arrs[i]);
       start_t = clock();
       merge_sort(arrys[i], 0, size_of_arrs[i] - 1);
       end_t = clock();
       total_t = end_t - start_t;
-      printf("\narray sorted with merge_sort\n");
-      print_arr(arrys[i], size_of_arrs[i]);
+      //printf("\narray sorted with merge_sort\n");
+      //print_arr(arrys[i], size_of_arrs[i]);
 
       printf("\nmerge_sort: %d integers\n", size_of_arrs[i]);
       printf("start: %ld\n", start_t);
@@ -142,10 +142,10 @@ int main()
    elements[0].str[9] = 'k';
 
    qsort((void *)elements, 500, sizeof(element), qsort_cmp_struct);
-   print_struct(elements, 500);
+   //print_struct(elements, 500);
 
    int input;
-   printf("enter the id of element you are looking for: ");
+   printf("\nenter the id of element you are looking for: ");
    scanf("%d", &input);
    element *target;
    target = (element *)bsearch(&input, elements, 500, sizeof(elements[0]), b_comparator);
