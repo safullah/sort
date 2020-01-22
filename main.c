@@ -145,17 +145,17 @@ int main()
    print_struct(elements, 500);
 
    int input;
-   printf("Enter the id of element you are looking for: ");
+   printf("enter the id of element you are looking for: ");
    scanf("%d", &input);
    element *target;
    target = (element *)bsearch(&input, elements, 500, sizeof(elements[0]), b_comparator);
    if (target != NULL)
    {
-      printf("\nelement found: num = %d, str = %s\n", target->num, target->str);
+      printf("element found: id = %d, hashcode = %s\n", target->num, target->str);
    }
    else
    {
-      printf("\nelement not found.\n");
+      printf("element not found.\n");
    }
 
    return EXIT_SUCCESS;
