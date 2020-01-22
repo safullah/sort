@@ -3,7 +3,14 @@
 #include <time.h>
 #include <string.h>
 
+typedef struct
+{
+   int num;
+   char str[10];
+} element;
+
 void print_arr(int arr[], int size);
+void print_struct(element arr[], int size);
 void swap(int *current, int *next);
 void bubble_sort(int arr[], int size);
 void fill_arr(int arr[], int size, int rand_limit);
@@ -13,13 +20,7 @@ void merge(int arr[], int left, int middle, int right);
 void merge_sort(int arr[], int left_index, int right_index);
 int b_comparator(const void *p, const void *q);
 
-typedef struct
-{
-   int num;
-   char str[10];
-} element;
-
-char *rand_str();
+//char *rand_str();
 void populate(element *target, int size, int rand_limit);
 
 int main()
@@ -122,10 +123,19 @@ int main()
       printf("end: %ld\n", end_t);
       printf("total: %ld\n", total_t);
    }
-   qsort((void *)elements, 500, sizeof(element), qsort_cmp_int);
-   qsort(elements, 0, 500)
+   elements[0].num = 1;
+   elements[0].str[0] = 'a'; elements[0].str[1] = 'b'; elements[0].str[2] = 'c';
+   elements[0].str[3] = 'd'; elements[0].str[4] = 'e'; elements[0].str[5] = 'f';
+   elements[0].str[6] = 'g'; elements[0].str[7] = 'h'; elements[0].str[8] = 'i';
+   elements[0].str[9] = 'k';
+   
+   
+
+   qsort((void *)elements, 500, sizeof(element), qsort_cmp_struct);
+   print_struct(elements, 500);
+
    element *target;
-   int key = 10;
+   int key = 1;
    target = (element *)bsearch(&key, elements, 500, sizeof(element), b_comparator);
    if (target != NULL)
    {
@@ -148,6 +158,20 @@ void print_arr(int arr[], int size)
          printf("\n");
       }
       printf(" %6d ", arr[i]);
+   }
+   printf("\n");
+}
+
+void print_struct(element arr[], int size)
+{
+   for (int i = 0; i < size; i++)
+   {
+      if (i % 15 == 0)
+      {
+         printf("\n");
+      }
+      printf(" %10d ", arr[i].num);
+      printf(" %10s ", arr[i].str);
    }
    printf("\n");
 }
@@ -182,6 +206,7 @@ void fill_arr(int arr[], int size, int rand_limit)
       arr[i] = rand() % rand_limit;
    }
 }
+/*
 char *rand_str()
 {
    int len = rand() % 10;
@@ -194,6 +219,7 @@ char *rand_str()
    }
    return str;
 }
+*/
 
 void populate(element *target, int size, int rand_limit)
 {
